@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}    % Math symbols such as \mathbb
+\usepackage{amsthm}
+\begin{document}
+$$ f(\bm{x}) = -a \exp{\left( -b \sqrt{\frac{1}{n} \sum_{i=1}^{n}{x_i^2}} \right) } - \exp{ \left( \frac{1}{n} \sum_{i=1}^{n}{\cos{(c x_i)}} \right) } + a + e $$
+$$ a = -20, b = 0.2, c = 2 \pi, \bm{x} = (x_0, x_1, ... , x_n)$$
+$$ -15 \leq x_i \leq 15 $$
+
+$$ \sigma_i' := \sigma_i \exp{\left( \tau N(0,1) + \tau' N_i(0,1) \right) } $$
+$$ \sigma_i' < \epsilon \rightarrow \sigma_i' := \epsilon $$
+$$ x_i' := x_i + \sigma_i' N_i(0,1) $$
+
+
+$$ \sigma_i' := \sigma_i \exp{\left( \tau N(0,1) + \tau' N_i(0,1) \right) } $$
+$$ x_i' := x_i + \sigma_i' N_i'(0,1) $$
+$$ \tau = \frac{1}{\sqrt{2n}}, \tau' = \frac{1}{\sqrt{2\sqrt{n}}}$$
+
+\begin{equation}
+  \begin{split}
+    f(\bm{x}) & = -a \exp{\left( -b \sqrt{\frac{1}{n} \sum_{i=1}^{n}{x_i^2}} \right) } - \exp{ \left( \frac{1}{n} \sum_{i=1}^{n}{\cos{(c x_i)}} \right) } + a + e \\
+    f(0,0,...,0) & = -a \exp{\left( -b \sqrt{\frac{1}{n} \sum_{i=1}^{n}{0^2}} \right) } - \exp{ \left( \frac{1}{n} \sum_{i=1}^{n}{\cos{(c 0)}} \right) } + a + e  \\
+    & = -a \exp{\left( -b \sqrt{\frac{1}{n} 0} \right) } - \exp{ \left( \frac{1}{n} \sum_{i=1}^{n}{\cos{(0)}} \right) } + a + e \\
+    & = -a \exp{\left( -b \sqrt{0} \right) } - \exp{ \left( \frac{1}{n} \sum_{i=1}^{n}{1} \right) } + a + e \\
+    & = -a \exp{\left( -b 0 \right) } - \exp{ \left( \frac{1}{n} n \right) } + a + e \\
+    & = -a \exp{\left( 0 \right) } - \exp{ \left( 1 \right) } + a + e \\
+    & = -a 1 - e + a + e = 0
+  \end{split}
+\end{equation}
+
+$$ f(\bm{x}) = a + e - \left( a \exp{\left( -b \sqrt{\frac{1}{n} \sum_{i=1}^{n}{x_i^2}} \right) } + \exp{ \left( \frac{1}{n} \sum_{i=1}^{n}{\cos{(c x_i)}} \right) } \right) $$
+\end{document}
